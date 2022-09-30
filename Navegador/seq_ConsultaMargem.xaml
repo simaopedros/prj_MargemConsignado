@@ -1,0 +1,338 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="seq_ConsultaMargem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="arg_inStrCaptchaKey" Type="InArgument(x:String)" />
+    <x:Property Name="arg_StrMatricula" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:seq_ConsultaMargem.arg_inStrCaptchaKey>
+    <InArgument x:TypeArguments="x:String" />
+  </this:seq_ConsultaMargem.arg_inStrCaptchaKey>
+  <this:seq_ConsultaMargem.arg_StrMatricula>
+    <InArgument x:TypeArguments="x:String" />
+  </this:seq_ConsultaMargem.arg_StrMatricula>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1712,2947.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>seq_ConsultaMargem_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="seq_ConsultaMargem" sap:VirtualizedContainerService.HintSize="1722.4,2882.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="var_boolInvalido" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: eConsig - Principal" sap:VirtualizedContainerService.HintSize="1680.8,2789.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V2" WebDriverMode="Disabled">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1647.2,2572.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Operacional'" sap:VirtualizedContainerService.HintSize="1605.6,52.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/carregarPrincipal#no-back" DesignTimeRectangle="8, 259, 230, 50" ElementType="Text" FriendlyName="'Operacional'" FullSelectorArgument="&lt;webctrl aaname='  Operacional' parentid='container' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='  Operacional' parentid='container' tag='A' type='' class='' check:innerText='Operacional' /&gt;" Guid="ef2a032f-9940-4abf-a899-4f02b9b9560c" ImageBase64="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" InformativeScreenshot="8aa3ca89e1774815a12ed2c5fe42e547.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eConsig - Principal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Consultar Margem'" sap:VirtualizedContainerService.HintSize="1605.6,52.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/carregarPrincipal#no-back" DesignTimeRectangle="-2, 320, 230, 33" ElementType="Text" FriendlyName="'Consultar Margem'" FullSelectorArgument="&lt;webctrl parentid='menuOperacional' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menuOperacional' tag='A' type='' class='link-menu' aaname='Consultar Margem' check:innerText='Consultar Margem' /&gt;" Guid="81c285da-2e3a-44e6-9a7d-b16a7a3adf18" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOYAAAAlCAYAAABWFpWhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAYhSURBVHhe7ZrBayJXGMD7VxV66GGhh9Jj/4Eee+qxe/UW8NCDByV4UAhCZmlEJCQLZjHBgIhgwlhiMMSYVEmnqQmKrpLk8PV7730zjjPzyK42r0n7ffBjdd6858zb95vve7P7xVPxx59/wdovafjp7RrDMIYg/fTBYjKMeUg/fbCYDGMe0k8fLCbDmIf00weLyTDmIf30wWIyjHlIP32wmAxjHtJPHywmw5iH9NMHi8kw5iH99MFiMox5SD99sJgMYx7STx8sJsOYh/TTB4vJMOYh/fTxnxWz5sDDowOHUW0M8y9D+uljVTFjuSrY1xOY3j+iCMj9BG4vm2Alos83RkDMou1Azy6Hz1sWOf4AGpmINkH6CHo4J71aRBvzv4f008cqYsa2OzBCGUf9E9gtFCCVsSC7cwRngxk8OE1IR/QxRkDMw2t8aFwfhc9bFjm+GjMRak/C7gXOAbazmEwUpJ8+lhYzXoXu7BGmFxWIhdqTEIurz7F8E7pCVLGIhcQ3HSjlkuo8sbjHfWi0BzByM+54APY2tb+1YP98uJiNL44gi2359iQsml9G7/MetMbU30X0ixegJH4X70GNPYPRZR1SNJYc32lDrY9/Pk6gVfT9jje+6DuD7oF7vURRPLBm8rqVmEnIHnTAGc/nYTrsw76XbTG74m90bTznI10f9rHqju/6JtCr1+W9eLJnqtC6EdenzhndtKHoViq+ufXmT/6mpe7bO+ZALR+4fubZIf30sbSYB338i8VSLh3R5pLBBYcLa9RvQnHDgtRGGRoOLs5ZH0pCXFrcU+cE23OQyLyH2vW8PdEY4ILE39jZgsS6ysaNyrYc+9PFVG3hjLkHjcsrONzBTL+eg/QHlf1v7YJsl+Pj99FFHaxMznvQeND49m9DePh4Bbte+zbYd9jv9GhBorzdh7NqGbI4VmKjAq0hXs/gRD5klJj4fabuNZVIQuoY7x1l7dXLkEaZ0jtN6NEDRo4Zr8AZSqzmzje3ww7kvevzt9NvopDTuw7s/yrmm/rg9RfldTA6fvjxZ/j6zXcS8XnZ4y6knz6WFjOw8KOwTnFxj2mhuIhMiwvKOc7RGAG5N9twSxkqKxY9ilnDRRTMyquLGcZ/jhxfCBc4x8MbX2Xk0emePJ6qo1BSVHVcW8ouXJ8SU86J/P5eSjRqqzE93om5oTGr2P8eM6D/gSHndgZnJfwcNbfyYRrI/nI7MgR703eMCfHNt9/Dl1+9kQjZlj3uQvrp4zkzpk4GcVwuuoA8ClXWycUTxwyKpaRbik2x7LIPClLS1cWkks4tFV38YgYfKn5848dKVzAVc5ET5b1b2i6KmSovlrKKRTHnEge/h4+7GT0K2S9qbmWJHXUsolRnFvCLJj4ve9yF9NPHc+4xZcYMlkmhjBlYKH4xfcdj61tQtEV5p57ucmHetakUVOROMMO64z0lpps9PhQgu6loOPNzPkdMcb+l31E68QBxmrRP9YuJ94xto3bF+62sLFXd/kERVcacngfeIgczJpb8h+54PlJin8li/qOIclQIFixNP/e4C+mnj6XFRCLfyhbq0LqZwRQXePqT9piBheITM1G9gq5dAWvTwj3mFlhiz4mZqSaydLmPWWoGjl2We8RcpQO3MvvReIGx5VtSIVo8Cdl3mHU9MdX+1XL7LyUmkmmCI/aI3gudaDHTeK0pMUfyhZjbPygmZlgcf4rXp99j4vhCXqeNc0/zg/fQO6cXWCzmi4b008cqYgrC/445k6IWaYE++VY2uFB8YqbKbegN530fxkM4q1h0XhLyx87i29z61XzhhcSpQ1e8/JDnir2jBfuX/jK5DzZ+X1rMEIFSttKfl82zCXRP8LvXPyxm6K0s9unV2+D4z8sE5h7noEWlPov5siH99LGqmIxBZCmLEhUi2phXBemnDxbzZSJK2dGN+uccWcq65S/uq3MR5zOvC9JPHyzmyyS0RUDkNkD3XwCZVwXppw8Wk2HMQ/rpg8VkGPOQfvpgMRnGPKSfPlhMhjEP6acPFpNhzEP66YPFZBjzkH76YDEZxjyknz5YTIYxD+mnDxaTYcxD+umDxWQY85B++mAxGcY0a/A3yunr8tS6hg0AAAAASUVORK5CYII=" InformativeScreenshot="4423bf55499b14cb9d2e1b7fbff4c8b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eConsig - Principal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Código'" sap:VirtualizedContainerService.HintSize="1605.6,2292.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Timeout="1" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="1177.6,2074.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="var_StrCaptcha" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[not var_boolInvalido]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1136,1980" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                    <ui:InterruptibleDoWhile.Body>
+                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="1100.8,1812.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTakeScreenshot DisplayName="Take Screenshot 'IMG'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="1059.2,233.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+                          <uix:NTakeScreenshot.Target>
+                            <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="963, 513, 200, 50" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='Código' /&gt;" Guid="1d9b09e4-ca05-441e-97ed-3c923fec55bc" InformativeScreenshot="544e853cb86ee667f97d771e2ddfa417.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                          </uix:NTakeScreenshot.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTakeScreenshot>
+                        <Parallel sap:VirtualizedContainerService.HintSize="1059.2,264.8" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Matrícula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Text="[arg_StrMatricula]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="288, 320, 780, 50" ElementType="InputBox" FriendlyName="'INPUT RSE_MATRICULA'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='Matrícula' /&gt;" Guid="2f95cba4-fead-40b1-9e1e-9d8dfc6227e7" ImageBase64="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" InformativeScreenshot="5048b481b0307dd5cd7c411c6b53adce.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="288, 298, 64, 20" ElementType="Text" FriendlyName="'Matrícula'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Matrícula' check:innerText='Matrícula' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAYCAYAAABDX1s+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMNSURBVFhH7ZXBSxtBFMb7VwWEvSSX5CAWAyEIYoNUZKFBsWRpKEi9bC4bBEVIQeolXrYISiFSaClFRCJFQRFRESVgSYlYCa3Xr/N2ZrOz04nEYKGHPXwwO+/NvJnfvvfmya/fd4gUKAKiKAKiKAKiKAKiKAKi6P8Ccl7Dm2wcxsQidn9o7A/U7nwcsYE4nLrerpMEZAcOWxxLmNi4DDtxtfDZTj4swGkNC0tlLHw80dtlXbP4DEZmroaztsbehx4HCJNhf8KN5ES6+VZGRth7DlAve/6x+R29/R/r0YDEBgbhbLcCx/YJquO+LQjQPFiHUxhBKsHnE9lpVLav+BofhqT82kUQxyzDfTuNTErsd+kiT/NTLhoibmO7guLEIAyaTwwiZ7s4uibbBdwpvqd8WRVA6Lt9ga0VC5NZnuXh/QJpgCRh0AWzi9gXqXv23gzmpYDNmgUjlcZLm5WF/RwJb30alQNmp3KZHePBxy2vdKp1giyBZ4fKs7Wbp8xfAdJYNzsgyMd+wS9ivF5n9n6A7KHCYKQmLDhLJRRH/f1qaIr1JA2QMjboomycW2W1/72GIgNhzLhw1RQkYFK9N9YIXBxPl/f4nLZk/DhjqB4Ha8NA2OGHVZ8Wjup7aHrx+gBCPnJvarNzeD/YwqbUwLVAdll68YAm8jNE0oR7/neAmyMXtp/SsnwA9wJhcTpzTCEgXXw66idDrrAlStQ7U0fsbtIjogdC38cryIlFGfHHwwH9v5jEJJUMvSZ+iahAnK8ihiaOr54y5FBkyC178cgeh/3lltvbh3j3jM/pgFB509gYpZKh85aQ92L0CoRpfzmN2DD7/sm/uwHJzZaw4FjIDYmG5QPxL5kYQdEpwflAz28vQDQ9ZIZnIu8hon9JexfHRWyme4EMmbAZELuQFj3vAUBUhYGIkhEHMYYsuKtz3lgukbPaHHJemrKGNkuX6Q0IzXV/ZUgt7K/4JZBEprAI5xWN9UB4yZjiRWQ/cb6KimgLXYBEIkVAFEVAFEVAFEVAFEVAFEVAFEVAQrrDH1VckQXlhq/LAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke seq_CaptchaSolver workflow" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Navegador\seq_CaptchaSolver.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <OutArgument x:TypeArguments="x:String" x:Key="TextoCaptcha">[var_StrCaptcha]</OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Key">[arg_inStrCaptchaKey]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="ImagePath">screenshot.png</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                        </Parallel>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Código'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1059.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Text="[var_StrCaptcha]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="288, 562, 645, 50" ElementType="InputBox" FriendlyName="'2fe'" FullSelectorArgument="&lt;webctrl id='captcha' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='captcha' tag='INPUT' type='text' class='form-control' aaname='Código:' /&gt;" Guid="31b04a04-a087-4d60-838a-053863a730d2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAokAAAA2CAYAAACr1AOoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOfSURBVHhe7d3BS5t3HMfx/VdCwVN3yamDIaXsMAShJxktpcIYZRQ8dRdLD4VCB2WeBsNCYaUgbqwHN2lHO8YQVqomNdUlrRgrFDTf5aePLvpLbzE683rBB3ken9zf5JfoRxvvNsPMzMzMrH0i0czMzMyyZZG4VF6OJ7//ET8//jV++mXWzMzMzE7pUu+l7kv9d7gJD0Ri+VU15p48j9XVWmxvbwcAAKdX6r3Ufan/Uge2d+F+JNbqb2OxUm093CxeBgBAP0j9lzow9WAWiUuV17He2CgeBQCgn6QOTD2YReKLhXI0m95FBADoR6kDUw9mkfj3y3LxCAAA/Sj1oEgEAOAAkQgAQEYkAgCQEYkAAGREIgAAGZEIAEBGJAIAkBGJAABkRCIAABmRCABARiQCAJARiQAAZEQiAACZ7kfiViPmH30TYxdKMXDmbAyUhmLs7mzUtorfJ1vVmLkxHB+3fj/4ydcxUyvuAwBwInQ9Eucnh2Pkzmy8el/c2KrH3K2hOH/vz+JGxPvfxuP8xGzsPNIejwAAnAhH8E5i8bNdYzqufXo75ovL2oPRuPSgWlwBAHDSdD8SO9mPxGrcv3x29xh6b5enYue0uTwdE1fPxeDOEfVwXJs8dEQNAEDP9CQS1x9dicFbT4urDu8krkzF2Bc3Y26luE6fa/zhSoy0XrN3ag0AQO8cfSQuT8Wl0pcxs1ZctxyOxPl7w/HtX8XFvno8/Go0HvpSCwBAzx1tJG4+jYnPL7YCsFHc2HUwEjscQbdt4lnxGAAAPXN0kZgC8cJQK/IOBmKSR+LFuL9cXAIAcOyOJhK3WuF3tfTBbzDnx83nYuT7xeIKAIDj1v1ITH8oe/yzDwZikn1xZW06xktDcePxf/fWn92Osbu+uAIAcBy6Hom1H0c7frYwbS8Ms0hMarMxeX33v7AMnCnFyPXv4nl+Ug0AQA90/51EAAD+90QiAAAZkQgAQEYkAgCQEYkAAGREIgAAGZEIAEBGJAIAkBGJAABkRCIAABmRCABARiQCAJARiQAAZEQiAAAZkQgAQKZjJL5YKEez2SweAQCgn6QOTD2YReJS5XWsNzaKxwAA6CepA1MPZpFYq7+NxUo1treLJwEA6Aup/1IHph7MIjFt5Z83UVlejcbGO0fPAACnXOq91H2p/1IHtnfhgUhMq79Zi0p1NRaWluOlmZmZmZ3apd5L3Zf673ATZpFoZmZmZiYSzczMzOzQNuNf6okPOGNilRUAAAAASUVORK5CYII=" InformativeScreenshot="c41f1363156e4c9bfb53abde10f5056e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="288, 541, 52, 20" ElementType="Text" FriendlyName="'Código'" FullSelectorArgument="&lt;webctrl aaname='Código:' parentid='no-back' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Código:' parentid='no-back' tag='LABEL' type='' class='' check:innerText='Código:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAYCAYAAACvKj4oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKbSURBVFhH7ZbNaxpBGMb7VxUCXrIX9yApCOKhwYZgKDlIg0KpCEEvSmFFSAhYCM3FQFkICIKhYLBiS6JYBIOHBELCSoJB2YikuT6d2U/dXT+SKonFwwO7M+87vr955h331f2fB/zPmgPOuuaAs67nAexeoprL4qh2bT0/Qf0ToFiKw7WwCNfnLISudYykKx4+Evf6Aw+BvDe/h2Cj7+4k6sbYCcsMeFXA100vXCwpgBbBOhFIpFG9NcSdp+Bj7PDtn0LsHbeSAVAaa7cgDtuUCakPkDrylpHBmNWP4HZiCK455N1eiqN81588tqwAp6FuB01DjTrgXQ5RCc6JaL6/N4R8CocX6nsL9UwMAbddd/hLoe+IivU0OL+yMawH0d0Y3vcCWgA3K3v6ZtKcgyTC9HmBbKwSc9+gp8sDVqrTDnYtAr7WkuduswjTccYL/lyJJ9IAxXxELvhTGk1lzKwOyjtOBcyDIEccXpZBbf6e4tUC/BFsRdeVgogGAIoVuZdpzspmjORs6C2iAprW9YKR5p3YqnSIQcdI0lrYEA5v1Hp7AIWDdXnBxLE2aRLZpSCNYSI4aitj3TOkVukPOZCsPaC665DWWdk/0/LEXzG8oXkDAMsJmr+IcE5xg6rBI0BjFEDLdYkpkuOh7EBTHuegxdGiUgsMZK61Z640JO8JgEPXZbf1Y2zQWD3YrGRRbJDnKTk4zhEdy8GhlwzR6Ft0Oj1If3vkJWNa19CDoy4ZTZb/gzzK1EEp5gm3qFrsEEDh4lLLl1Tdll1/t6d/DAy7RUddMs+qttwetiV6KuLgeiB8aQP4I/UyAMm3afFbBIFlxXUixr0BLjPGV9IIvQzAKWoOOOuaA866TIBC4wa/q6co/CzhR/FkxnWCvxiDdsNqjGbKAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Pesquisar'" sap:VirtualizedContainerService.HintSize="1059.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="1749, 639, 149, 50" ElementType="Text" FriendlyName="'Pesquisar'" FullSelectorArgument="&lt;webctrl id='btnEnvia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnEnvia' tag='A' type='' class='btn btn-primary' aaname='                                              Pesquisar         ' check:innerText='Pesquisar' /&gt;" Guid="f83e1118-c2c0-472f-972d-2c890e6ef377" ImageBase64="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" InformativeScreenshot="96f539ca21a5f34b650d6ed53a790ecd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Resultado da consulta'" sap:VirtualizedContainerService.HintSize="1059.2,685.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Timeout="5" Version="V1">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[var_boolInvalido]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="702.4,467.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Nenhum registro'" sap:VirtualizedContainerService.HintSize="660.8,374.4" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[var_boolInvalido]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="304,155.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[var_boolInvalido]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem?eConsig.page.token=99097bc7c4e3b96bbe35f4fab514b948#no-back" DesignTimeRectangle="384, 288, 481, 54" FriendlyName="'Nenhum registro'" FullSelectorArgument="&lt;webctrl id='idMsgErrorSession' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idMsgErrorSession' tag='SPAN' type='' class='' aaname='Nenhum registro encontrado para a pesquisa:Matrícula:  ' check:innerText='Nenhum registro encontrado para a pesquisa:&amp;#xD;&amp;#xA;Matrícula: 3483901' /&gt;" Guid="d9a064ca-a108-4013-98f0-91f8a7a5c73c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAeUAAAA6CAYAAACOL0EsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABZwSURBVHhe7Z2/Txw718ffPyMtSMlzkwgkVkEXXRQEelZBCYQoFyJWrFixCgpixSpANnD1NCkoKCgokCgoUlBsQZEiEkUKCooUFBSRKCgoKJBokCgoUp73eGY8c+yx5xdLMnBP8Sl2xvb4xxl/7WOP9/9+/vM/YBiGYRjm98OizDAMwzA5gUWZYRiGYXICizLDMAzD5AQWZYZhGIbJCSzKDMMwDJMTWJQZK2flIqy13YNPD/tgb84chmEY5raTp77uloryNDTvYQU6DMEPYxjmWnyswrZfx0ixClemcAzTCt4OBbb2fNochmFugpz1daoo0xcDM3ZJ7xF+PA8KsDG+YAxzs7Ao3zi6oWbsKE/LI7Az7PLtbcMYhvm15LJNWJSZ30WL+rpWYRfle+2wOV5XAktYlP8d+C6driJ8z+jS+f22wujksk1YlJnfSCv6ulYRIcqCTmi+XVYiCFiUmaSwKOcPFmWGyS8xooy09YYWvmNf6sUa7D/vg7WH7V64+7DaMwBfpxZCvnqaVhPvH74agI2O++61tj9g7ekIHL5X4+iifOg9b/WBd+1hATaHq3C+pMWrl2CDxAuJOS1/TwnO5HUaD68fz5Sh+bQTVpxr7bDSTcqml/1BJ2w+L8PxopdWDEp9VBtwPDEEm059aPlNUccOSwvwY1ym5YV/OgT7Mw04pM98G8RR8kKuC87flrAOCrAiRpcyvUIfbI9W4FSU1WRLPj2wV/fS0ur29H0VvvZ3O+nqthV6JtbtRv9rOKildMFiXSh2Jtqwqw+aEzW40MKejfd4YTA/b2pue3T94V0TdV6EPaxDGodyUatgeXoC23Rs2q13U/g0ZUz97rSyTZYacDI5Btu6DQgbnKxbl76unLRIfTzshq1X03BeJXkziLKtHvfeWuzdgKm+1sl7Kuo53NdgnudrcDBaJO0ehD+Yi5602N7hq/o07A1TG0REv/W8BEfzanpRtCSduP7N8m5ILpzwYZs11eXPfxpwOvkatnpk+ohoS7SbnXG0A63PdtvdtT23bNH2Qus+rE0LsNcT3Kd9mr2vS57fdHZSh70+Ea4d1v5bCbQGiRdlQQca04cgXFTBLzENxw1A4xNWnpaVDNC0PrVJgdHRZ+xUlDGO7XlavlsiytY8isrFBkmaFwv2+gjym7aOf36Yhp0ue92udgS/4w11Ga93+tdNrP9dzyYAWt0GtlWH7wNRz7wPm6M1qxAozJVhU3bsJrrUdqKiHNX24aWeZTh62W0IK2mH9ZczJM/py5j63WlZm9Rgtyu4ZmK1WA0PcEp9QcemQ5+jiHJ8Pa4N4gCcPMdG0vr6XCZtOfsa1ozhJJ2wPaUOmOLe4cvJIrlmoK0bdmeD9Gy0Kp1k/RvSPQJHSh+GfcGLgjmsA9psib4XKES9EeljW25Xgn4+i73Qur++KKfIb0o7uSgPkHvtsDMtnxklyo+ws6Ydf28gUtaC17HD8+PgCOuvoruhZHAA1khHuIqdkYyjGLDgAY6EBkUcnAXS5z8Zg1P5HEWUXVaeDEATn9XsU41kfZQYRStE2eE+rPUPYtmKsOHPVAkPe2Fb5EWM8Mj11Vc19XkGQvWBo7KNotiUgzNQESZ1HTfgez/No8z7CGz/RUZ0HrGGWhuDdT98kJZ4vjta74N9MULHEa64vvUkSGO11ws7PAZH0nMQqtugLd1NSNgpv6BiRfLfQ2YHWBdbZfPs0+fjDOyQAYh8Tqgd+yu+oCiiLPDbA+NQcW8bhMOPwbPOSr0kXtBOqk10whfnZcxWxtTvTsvaBDuViT73npi5iGcOD2K6al63p8hAWrEbEc99R3S7dSCdrLUetfec9ik2rPUVeo9RzGoyXgP2n4pr+Oxuz170PGttH/sO/zMDXx6Je8Jb5b2/xV7icUCU/s5Gi9IJtbfNXhGyAVhpG7+MBht/54a/mho0ht8peh6/Ryj6Mk/vRmDVTwPx7UWzbcENiXKq/Ka0k2yijKJ0gr9pxaxi4UWD2Ar+47k07MfQ1EaPYrbW9DvEIhx4mVMMWJ9NKi9yL+z57hBVlGW+ZLyTv8nIurccjKJbIsrqaO7nhypsKy/BazghLo2zN6RTp2laUOrjETai5vZOXceKcYf3CFxU1TaOM1SljgbpjMblar6huBNttuKjdQgbOIhS3JHK/XD+T9+QjgFfkmNyT0dxRevPUUbFBb9TVmfK2lKO0vb0xcJ2INf1WbSo87Ue4sLOWMZs704L2kSAA5zvk7rreBkOirIOkRd08E2u4wD/lLopF6ndIn4nG1+Pge0OwPeYJSK9vpR3a6kO3+isiHT0V9MVONBdsda2155jeIcFp1OGJa2INrPRknS0/m3zjdreaj1LjwppG0MZhTfPj+N9YkTfpXV8Bg0vuJiXdr8Mh89Ue1H6zcUqNJ3BiMcNiXLy/Lqks5Ms7mtPQM7G1ZGqeDHoGmRQcDlqE4j1xQKsafjrQSRztDLCBa/DbiEcRxXlHvim75ZDo/RdCW1DwWhGMb6soowGSOM4M1F5z1CGuRJ5QQzP1KD1sSbcwMr99HV8Tkezxu/vUrp05nGm7l2TM7rdiSoczS7AJZktmNKIF4BgsCZRRpRkBhtAO26DLfjQdsLRbFe47oL1+XuwWXLzqohyaBAiREimGcRRBkIxAwVB1jJme3eu3yaRVMnswn+H1LxQG5P4M2+B7GRj61Gz3ap+XyW23Cnb7XDQnB59TvgdjgIHBn8GcU31lIyU6dD2xv4y3EfJWaCL462hdfWgM/wuFegarNcH0zjOzPM17E1W4XiuAZfKWvIM7Pj2/tifaVOU9/KGRDl5fqOx2YmNWFEWHY+6htgN68T9FTyECmU8suDGyvCxVSJ9lsGIbOJruy5JIsr0uodSBr1jiHumRmRaGerYZrwUajS0DWxtc14dUV23hJWeETgkG0xoGkaDpPXzZ7hu4/Nvf9GiwsUh80qfb8q/sXw2O7KQtYy29omKo8fL0iYOYqOhvsFIxy87tVuydk2hdSbrIEE9xpaFEF1fiOVdFRuZdugmMwP02cpzLAOF8yl9k1wYYx41WpJOTP8mCNUzbZtYZF0uw8m49+lRKIyYMZbgxPH2ZLQXJNoekr0TwfWk+XVJayc2EoiywL7gHTyEzuIK8DXJBgMk+kWxVWIrRFmf8WozFlr+GKONLIMtLxai6yN9HV9VyGaQJ2NwEgpD01SfGZ2XZbh8X4OjyRJ8FeuJ3WR9mqxj0TSMBhlTtzczU74HnydV15ONTKKccsbViplyuH1aJMqmTlpbmxezCH+GREXaj3t7Z8pX0+ryjtjZLMtKO1+aXnS7oE0p6+Q4kO0I0qTiaopLaVU6SntnmSkXXhv6lQiWluFibgYOJ8ZArOcHX4Qgz4Q3rzUz5bD3KGNfF5vfbHZiI6EoI8p6ZYBqjBHrRshFtQwH2jb9aANusSgr8bS1YeHyIc9Syh/TSUWWwZoXM3EvdOo6XqzAZ/KCrj4rw4l3/2p+Bva0Hb/0mba8nM3MwEXIfYP11y3DB6NbmoZpXSZWAJT6a92acmhNEbmaq8D+OzX9TKKsiGh4LVSst63/NQKHde9ZGcsYbSvJRDlLmygDvQFtEGHpQ27nmrK6PPFZ20hobvu4dqEDFBxYz9B79jYL06p0EMX+MqwpG+IIIT+c0HfFN+DkneETtiV6opboI7OvKSvvuDYJuawOKsJpeyeC68nzm95OrrGmrNyfK4U++VE6KmVnMOLvbiQzKW1DSrQBt1qUtcb2d9QZdlHT8sd0UpFlsObFTHR9IBnqWN0XEA19pjEv4kg65/nuN6nOLkNE2clNRtvKS/KgB5rjZdgbHoJ9ubs1pm5Fm93U7uug/TEt+V2mtpkrmyhjPNuu4RvafR22FXvHfO02UdaNxwKBXazBLhU2GlfZfITckt3Xynog2fB2MTOmvIdpRDlY71U3a55P2kUjTKvSQZQ+SpBh9zXif82AbSq//1Y24UobEJ4VuVtc37UvbYbOxAUJd1/rduZ/laOXA6H1YmyzFPlNayeKdwzrm+75SCfKiLKrDtE7qkuszHW90ihtBeyIgplAto4lqygjUd+p0m/faPljOqnIMkTlxUB0fbikrWPR6VvXRrrR0Ihblz7TlJdz6mY0on2baPGw+J+qxQmAQyu/U67AZ0N+AjCtCSKuGUXZEdpf+J1y2FYiZkvXbRN9cEOxvUNI5HenHZ1Bv0I72QT1eJPfKYfckhSSRnJRDotZAKZH3lFTXEqr0lHa21oviOE75ei2QbowjrdR8Gg4yr4R7Ld2iJco63ft9m+n7fViarM0+U1rJy0VZQGdeZk6qp+LdTgQpwvRk02cU2bC2/ezdSzXEGWB8QSwCpzOWjqjmE4qsgxxedGIe6F9UtSxz8cFOHbWgFGIX5XgwHHNqCNuun5jy8v5uzLsim/16NoKPtt28tTP+enwqTyjM+5oMk4ACK080cs53YzuELWcQpRdlF1+2Yleid8dj+u2yQftRDks17qov+nouOETvcS7h6I6R+IpnaxLy0/0qjYSn+h1OaudWOWdKnVEPndMI8qC86p6StRKh3tq1kGCuJSWpKO194lTXpmm+FIh5kQvr22CrxdscRpwOlVyNkPRLx3EWrg4geyHoe5NJ3ptj9fgmH5qarCX8ymsF3+fi/DqFWF3Ou3phenym85OkrqvmTtKA46mTOvAmudDOwSBYe4SScTyX0mKgXFeUJZgDKJ8m2FR/hdwKTfmKGsj2jowkmRdjmFuKyzKFliUcwWL8p1HfApENwuZCZ2XzTB3DBZlCyzKuYJF+V/CxWzFXQema9DezHnX9s9SDHOHYFG2wKKcK1iUGYZhGCYnsCgzDMMwTE5gUWYYhmGYnMCizDAMwzA5gUWZYRiGYXICizLDMAzD5AQWZYZhGIbJCSzKDMMwDJMTWJQZhmEYJiewKDMMwzBMTmBRZhiGYZiccEdFuQEHz+QfVHfC54n6rznb+RaeIcswDMPkB1WU3w75h3yvvvD+8DyGk7+7/TjXPeT9tOz+paDg29uUf1zvsww/nnuC3NYNX94tG8LcEL9clNU/srczBD+M8SV12OsN/sR7ddje9uE/NLf96XfWvDXgdFL943bxR/jOH9DXo9oyHM/5w/fxaTin/yNNbFzhjh1qzzDM7cQqyp/udcNujdwzUS/DZlvQsV1XlOm/uGyMLxjDxHH6ptdNo2sQDubNYW6MWyrKdGD1qdeW72U4eknCGbkPm6W6Fz5D3j7UYJcMDsJg+qM1uPTz5LGEg4qnEX9P2TEA3+e8sCzKDMPkmAhRRiKFZRkOimoHmgdR/q38clFuwNFo4F3wed4HazIfyCoKTkjIPC6xzVdl2LZe2JPipTPzOgiHrDwZgKbzvCJskFnzp3t9sO8MhtLn7filXHIQ3Ie1/kEnTrO/O5g132uH7QqdMS/D4eDjIF7bH7BRxOcMDsDaAxkH6RiBYxEeZ/oyL9u9JB6LMsMwOSBalLED3Cqb3chXtDP3UEV5Gc7elmCnvwdW/c6xHVa6hEtxBs5JWtbZi0MP7NW9cJronb6vwlfRYeNsXYp43H+mnmOemk8LThwn3INO1zVKXa/0OaZZJs0vFd8IUb6qT8Pe8ABsdJAZ3UPX7Xukz+jnyrAlhK6tAJ/LcuaZFOK+R4ToXRjDIR+qsO17Oh5Ds2p3Dyv/X/qnPuCYgS+PZDpRg7OovM3ATkReLitFP96nJ2NwKu/VxmBdXr/XDV9ngzg/P0xDs0PeuwebE6ot3+X/ZGUY5nYSI8pIWxEOPpAwDtgJk85OEsxgcBb93yg3JNI9BicyvSyi3KamHy/Kdfg+QGdiOp2BALZYlC8niaCYaOuGXV9MGvC9n94bgiOZfgLOxj33vcDqihZo68hkxmrk3UgwCHtUhO9zy9668zKcv3tN6su+7BGZt/kybPppoM19JPcEcyUivgX/GccvyWy3WA2thV9M9AX3e8vKYJBFmWGYvBEvyoi+6SvozMRsLginuJxlJ44z0U3hThTuwr/+8MMK1kc9EfRciltPgnurva7rcmd4DI4WvTQVsXSRblS5Mcwsystw9MLsGlXy1NYH+2LG3GJRDmaS92H1adEtV7E3mK0L/NlfdlE+QwHy3bz/QeFUNl6pKOvI0rW7tAwXiw2X0EBMneWaaYf1V+ZNYvF5U2fbq88qcOYJ89X8DOxpA6pmVdxbwIFFcM245IEz6cBdrrYlizLDMHnDLsqDY7DriySZ/cxXYEuKCQrPt0EZRu8U63A4UQu5TtVNRerMJXZNWRPlDRR1XQCMoqzE68Trqmv09E0frPURF3bLRRmfMVWGYzm4kCiu117Yk8/P6L6mZZes9IzAoeYet64j03IZROq8OkTya+DRAHybNbvAk+TtrERm0jG49qFuJnOFWkNpS1LHCIsywzB5wy7KopOiLktHZOimmk748i6BkOoobkhV8NKJssHFiZhE+aI84F/71F+xr7FKbkCUzdTh259eeETmNysm4XPowNm2rCtlHbkdNkukniNEWRFyxL7Ry+y+TpQ34dF41UM2dQWs9BRhqxD8dvc6sCgzDHO3iBZlx2UpRbgdtp4V/Y5ZrEGKWapVSJcW4HC0CJtdqsta5RqiHNps5GIS5dSd7w2I8vnUGGzTDWYGrivKlKtaSflczRcx+snRf3pg2xFWj37ixUDRda9X4FRzE4fXnxuw30/Sjaljc97I/fkaHE2Muc9/VYLD2QbaGnVvt8POtAjL7muGYe4WMaKM15SZlQfZ/GUWUq3zF2uphQKsCRSRvoYoW2aiJlG+3kx5EA61+0p6CURZd8uKwzacukCoSLdSlAW0Ltz2nIam/J0Y0UZqPFM+FYGztA0lnDdzOImy278N28SbXfNGL4Zh7hLxoowoIqS5PI1CSmcnhddwTE9UipiF0rTW3xjWUjOKsvrM8Jry2XgfrBdLcOyvb1IR0r+LrcM3eihGrCjXYdd3uxbg64xMR6C5X2V+U6wpX+AMfO+dmElq95Zq8JVsnHPrM6soq2728ExZ3cktxTFd3uQ9Es7j6n0Ftsluf3HimH+fP4liGOYOkUiUlZnvE/IpE2IUZbpu/AhnNXKD09ICOZNaEOFOfNADzfEy7A0Pwb5co8wqykl3X/sHXyzD4TMiMvJAitD6KZJAlANBewzNqUAYzicHlXVaN79pdl+TT9PILvfQwRliM5f8rCyCKJEKzfata8pYRmfQkyVv7oE04nhM6VbffkqO2xR0oM0oO8NTHh5CYFFmGCZvJBRlZK4KX7GT/E5nIohRlEPua4LyfbEqyvrMRuJ/OpVZlAUpvlMW4Gx1k3bqFFqGWFEOC1oAphNyXycX5avqkHFTlALOtpsVdYZoI1qkGnD4oqCmHSI4BjNT3ujGQhO2o1PTHLNJYFFmGCZvJBdlC2ZRFmAn/oqeYCW+0cVZ72yFuFA1URbMT/undDlhHnbD1qj37eu1RNkl0YleksUa7D/vC04kEydwiY1Ps5Z8ROTvvGr4s4SJGhyY8pvCfS02RR2MDmLaBXJymki/B7aGy8QlH08SkUr+hxQZ8rZYhwNhM3TfAbbP2tMi7E4thN3gCgn/kILAoswwTN5QRZlhGIZhmN8GizLDMAzD5AQWZYZhGIbJCSzKDMMwDJMTWJQZhmEYJiewKDMMwzBMLvgf/D8fUq7RlOVRNgAAAABJRU5ErkJggg==" InformativeScreenshot="6faa668f05d0fd6f403324f476999bf6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem?eConsig.page.token=5b45ff6c94150e339d481faeabd3e96b#no-back" DesignTimeRectangle="832, 419, 184, 20" ElementType="Text" FriendlyName="'Resultado da consulta'" FullSelectorArgument="&lt;webctrl parentid='consultaMargem' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='consultaMargem' tag='H2' type='' class='card-header-title' aaname='Resultado da consulta' check:innerText='Resultado da consulta' /&gt;" Guid="2bafc1d5-b741-4a6b-aff5-76d50ff481f1" ImageBase64="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" InformativeScreenshot="ba126004aae5d4796e9ca85b950fe267.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </ui:InterruptibleDoWhile.Body>
+                  </ui:InterruptibleDoWhile>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="375.2,510.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Matrícula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Text="[arg_StrMatricula]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="288, 320, 780, 50" ElementType="InputBox" FriendlyName="'INPUT RSE_MATRICULA'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='Matrícula' /&gt;" Guid="2f95cba4-fead-40b1-9e1e-9d8dfc6227e7" ImageBase64="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" InformativeScreenshot="5048b481b0307dd5cd7c411c6b53adce.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="288, 298, 64, 20" ElementType="Text" FriendlyName="'Matrícula'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Matrícula' check:innerText='Matrícula' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAYCAYAAABDX1s+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMNSURBVFhH7ZXBSxtBFMb7VwWEvSSX5CAWAyEIYoNUZKFBsWRpKEi9bC4bBEVIQeolXrYISiFSaClFRCJFQRFRESVgSYlYCa3Xr/N2ZrOz04nEYKGHPXwwO+/NvJnfvvfmya/fd4gUKAKiKAKiKAKiKAKiKAKi6P8Ccl7Dm2wcxsQidn9o7A/U7nwcsYE4nLrerpMEZAcOWxxLmNi4DDtxtfDZTj4swGkNC0tlLHw80dtlXbP4DEZmroaztsbehx4HCJNhf8KN5ES6+VZGRth7DlAve/6x+R29/R/r0YDEBgbhbLcCx/YJquO+LQjQPFiHUxhBKsHnE9lpVLav+BofhqT82kUQxyzDfTuNTErsd+kiT/NTLhoibmO7guLEIAyaTwwiZ7s4uibbBdwpvqd8WRVA6Lt9ga0VC5NZnuXh/QJpgCRh0AWzi9gXqXv23gzmpYDNmgUjlcZLm5WF/RwJb30alQNmp3KZHePBxy2vdKp1giyBZ4fKs7Wbp8xfAdJYNzsgyMd+wS9ivF5n9n6A7KHCYKQmLDhLJRRH/f1qaIr1JA2QMjboomycW2W1/72GIgNhzLhw1RQkYFK9N9YIXBxPl/f4nLZk/DhjqB4Ha8NA2OGHVZ8Wjup7aHrx+gBCPnJvarNzeD/YwqbUwLVAdll68YAm8jNE0oR7/neAmyMXtp/SsnwA9wJhcTpzTCEgXXw66idDrrAlStQ7U0fsbtIjogdC38cryIlFGfHHwwH9v5jEJJUMvSZ+iahAnK8ihiaOr54y5FBkyC178cgeh/3lltvbh3j3jM/pgFB509gYpZKh85aQ92L0CoRpfzmN2DD7/sm/uwHJzZaw4FjIDYmG5QPxL5kYQdEpwflAz28vQDQ9ZIZnIu8hon9JexfHRWyme4EMmbAZELuQFj3vAUBUhYGIkhEHMYYsuKtz3lgukbPaHHJemrKGNkuX6Q0IzXV/ZUgt7K/4JZBEprAI5xWN9UB4yZjiRWQ/cb6KimgLXYBEIkVAFEVAFEVAFEVAFEVAFEVAFEVAQrrDH1VckQXlhq/LAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Pesquisar'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31e57c3-c7ae-47da-9e56-ead0f82e6b9f" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="1749, 639, 149, 50" ElementType="Text" FriendlyName="'Pesquisar'" FullSelectorArgument="&lt;webctrl id='btnEnvia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnEnvia' tag='A' type='' class='btn btn-primary' aaname='                                              Pesquisar         ' check:innerText='Pesquisar' /&gt;" Guid="f83e1118-c2c0-472f-972d-2c890e6ef377" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAA2CAYAAADUFjuBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAWESURBVHhe7Z3dSyNXGIf79y1IofSml1IQKuSiBVlc0AoWLyoUhRKQBiRgJRQCRaEqu25asgZ3UTaNK1lZK5JAbRAUYUAmCr+e32ROMpOcxHzMSd30PfCwmZyPDDuP7/ueczOfVO/uIAg2EckE67RI9uLl75h6OoNPP/sCT8Y+F4SuoC/0hv40OxWSbOWnVeMCgtAL9CjoVV0yGmiaIAj9EIxodckY6kyDBaEf6FOLZFKDCVFCn1okMw0UhEEQyQTriGSCdUQywToimWAdkUywjkgmWEckE6wjkgnWEckE6wxVsvEvv8LP67/gz8I7/FOpeDx/kcEPSz96faY5wsfPUCSjQBQr2ChYsPGaAprmCx831iV7+uxbXyN4ovGa3+vIpaObbiLa6GFdMh2xtDw6XTJNBscFZRPRRgurklEkNtZcjGAPpUSKxjFER7zoSCLveLcTbq6D0sEGvp8wzXksqHu/AZzjtKHv8WNVMjZGLX4OpspO6PSq50VHTbLS8/D3seUt5C+rcMu7mA18L0SHNckYvdj4L+klBVIwRjNTX/+YJfOY2MLpfRXFNUOfMDDWJNOpkimQn3Wh3w2UTM819fdHB8nGJpH5G7h4NedfTyGZK8NxvdsA7h1cFMIpdTyeRemm6g9QjWn3dRrTun9xA/lKIz+7N2Vk4rwHB/mEXqf9Pe2UVXosJEPXjXELSBcqcO79xdUfiHN5hp3lWv/s2j5OLxu/jdtrFDcX6muRRMFR629g8/jaWyf4W1FjTTItCj/3WsjrDUC0dVm3kk2qB6D+48+zSDybrPV/HcfmeyeQUtdRvFXjcwnE/DViy2lkNv0HNb+LklvFVV3MSUyv7uNCfefeDi7Z9B9qM+WcIb3o39/EHBLbu0jNsH8BO4UT7KzOYdyfG1vhb1/jjS8hoWTgPb63X49akywYyUz9nRhkbns6SDajpNDpciaLi9sTpJrHjMXx5kqnVDUe4YcWJHmsItxfW/WHrBlPncDF4JLF36pJhvU7wfmNSO1LdnWIpcAYW1iTbJBopI89TH39Y36gLYX/tnoaHVptvop2b69rafT4EJntNOLzU/6aCW8naJR5LK0iYATp0ouUKhBdlpF/lcVmchHTgWg0mz7ChRNI5X4LrldLl41rm1iTTO8SGZVM/e1g9Opn3sPUHmhL848w6jtLSuYcIRGaayY2n0Bq+xDF81p95J5T1CFIRlSK/C65hb3CGUrqjwT318ivqvTpbWIcnP66FIp0zeuNhGRE12W9RLN+5nRH+wcagumSKY0PzNTfjokNnPoCdZ8uaw//6vVSaJyu+TpK1sRsTkVWFY2fJI7gtPyRzGGPZdwoSqajUreHq7oWiz6KkS4l8wp/NdCtYE8XzyyscxWVUrP4hteqhit+2EdqWadIVdin1MO9ryDD4lsX/gdqt9lc+KsoE5RsWkVOl7+14q/lbTKUMKq1kyyRO0NxO9lIkWpOpqzWPl73I1kVp7/5kUzde+pARVqVXkdSMqLPyyhau10mZdQRjK3X3Wh3dCsZmUT85Rmu1HjdnMpRYzdHEQ4CRxyquU4F+XTjmMB4hLGyru4hLFntt8LHJaXcupKmnWQUNusdUbjBIwy1G4770sXWDlVN1ujj8Uu6SaqRkoxQIl3Ms/Ezo1VQLDbKpcfZEe2/hqI3Szb6DEUyQtEY1ShXs3AUiv163OiKJpJZlawZLZWJ0RVNJBuqZA8x2hHt/8WjlYxQNNZtdnabwrB41JIJo4FIJlhHJBOsI5IJ1hHJBOuIZIJ1RDLBOiKZYB2RTLCOSCZYp0UyeVmEECXGl0XIa2+EKDG+9kZe4CVEifEFXkReRShEQdtXEWpoIEOd1GhCL9AXehOMYJoWyQQhakQywTJ3+BcRoi6sKEkccgAAAABJRU5ErkJggg==" InformativeScreenshot="96f539ca21a5f34b650d6ed53a790ecd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://portal.econsig.com.br/cascavel/v3/consultarMargem#no-back" DesignTimeRectangle="288, 492, 52, 20" ElementType="Text" FriendlyName="'Código'" FullSelectorArgument="&lt;webctrl aaname='Código:' parentid='no-back' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Código:' parentid='no-back' tag='LABEL' type='' class='' check:innerText='Código:' /&gt;" Guid="596cb670-4d3d-429a-b404-cb3157c73fab" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAYCAYAAACvKj4oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKbSURBVFhH7ZbNaxpBGMb7VxUCXrIX9yApCOKhwYZgKDlIg0KpCEEvSmFFSAhYCM3FQFkICIKhYLBiS6JYBIOHBELCSoJB2YikuT6d2U/dXT+SKonFwwO7M+87vr955h331f2fB/zPmgPOuuaAs67nAexeoprL4qh2bT0/Qf0ToFiKw7WwCNfnLISudYykKx4+Evf6Aw+BvDe/h2Cj7+4k6sbYCcsMeFXA100vXCwpgBbBOhFIpFG9NcSdp+Bj7PDtn0LsHbeSAVAaa7cgDtuUCakPkDrylpHBmNWP4HZiCK455N1eiqN81588tqwAp6FuB01DjTrgXQ5RCc6JaL6/N4R8CocX6nsL9UwMAbddd/hLoe+IivU0OL+yMawH0d0Y3vcCWgA3K3v6ZtKcgyTC9HmBbKwSc9+gp8sDVqrTDnYtAr7WkuduswjTccYL/lyJJ9IAxXxELvhTGk1lzKwOyjtOBcyDIEccXpZBbf6e4tUC/BFsRdeVgogGAIoVuZdpzspmjORs6C2iAprW9YKR5p3YqnSIQcdI0lrYEA5v1Hp7AIWDdXnBxLE2aRLZpSCNYSI4aitj3TOkVukPOZCsPaC665DWWdk/0/LEXzG8oXkDAMsJmr+IcE5xg6rBI0BjFEDLdYkpkuOh7EBTHuegxdGiUgsMZK61Z640JO8JgEPXZbf1Y2zQWD3YrGRRbJDnKTk4zhEdy8GhlwzR6Ft0Oj1If3vkJWNa19CDoy4ZTZb/gzzK1EEp5gm3qFrsEEDh4lLLl1Tdll1/t6d/DAy7RUddMs+qttwetiV6KuLgeiB8aQP4I/UyAMm3afFbBIFlxXUixr0BLjPGV9IIvQzAKWoOOOuaA866TIBC4wa/q6co/CzhR/FkxnWCvxiDdsNqjGbKAAAAAElFTkSuQmCC" InformativeScreenshot="8ac4c7ebd9204106b6e4937e021a2c7c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consultar Margem Consignável' /&gt;" SearchSteps="FuzzySelector" Visibility="Visible" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Edge" IconBase64="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" InformativeScreenshot="09b8972cd07f3427b5eb84df7b4a6225.png" Selector="&lt;html app='chrome.exe' url='*econsig.com.br*' /&gt;" Url="*econsig.com.br*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
