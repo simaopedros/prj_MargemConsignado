@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="seq_AbrirWebSite" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="seq_AbrirWebSite" this:seq_AbrirWebSite.arg_inStrCidade="govsp" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Argumento que recebe a cidade a ser processada" Name="arg_inStrCidade" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1139.2,1038.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,1021.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>seq_AbrirWebSite_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -74,10 +74,9 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="seq_AbrirWebSite" sap:VirtualizedContainerService.HintSize="538.4,973.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="seq_AbrirWebSite" sap:VirtualizedContainerService.HintSize="538.4,956.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="variavel que recebe a URL do site" Name="var_StrURL" />
     </Sequence.Variables>
@@ -87,7 +86,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496.8,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio da Abertura do Site&quot;]" />
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[arg_inStrCidade]" sap:VirtualizedContainerService.HintSize="496.8,310.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[arg_inStrCidade]" sap:VirtualizedContainerService.HintSize="496.8,293.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Assign x:Key="cascavel" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[var_StrURL]</OutArgument>
@@ -102,6 +101,14 @@
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">https://www2.econsig.com.br/fozdoiguacu/v3/autenticarUsuario#no-back</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="govsp" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[var_StrURL]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">https://www.portaldoconsignado.org.br/home?1</InArgument>
         </Assign.Value>
       </Assign>
     </Switch>
