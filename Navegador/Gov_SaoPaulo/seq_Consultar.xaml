@@ -1,0 +1,152 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="seq_Consultar" this:seq_Consultar.arg_inStrCPF="228.718.148-21" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="arg_inStrCPF" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1017,1541</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>seq_Consultar_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="seq_Consultar" sap:VirtualizedContainerService.HintSize="476,1476" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;INICIO - COlsultar&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Serviço de Controle Consignação" sap:VirtualizedContainerService.HintSize="434,1092" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1415b799-1d4f-4b35-966e-574c2a02fc7f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,876" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT cpfServidor'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1415b799-1d4f-4b35-966e-574c2a02fc7f" Text="[arg_inStrCPF]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/pesquisarMargem?9" DesignTimeRectangle="467, 403, 172, 21" ElementType="InputBox" FriendlyName="'INPUT cpfServidor'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='w166' aaname='' /&gt;" Guid="1167e154-96de-46a8-a4f5-e69a81a55f98" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALAAAAAZCAYAAACRpKR4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABrSURBVHhe7dKxDYBADMBA9h8lE6Z7OhpgAEt3kjfwtbtHqmZgpXsGnhkp0+fAUGBg0gxMmoFJMzBpBibNwKQZmDQDk2Zg0gxMmoFJMzBpBibNwKQZmDQDk2Zg0gxM2u/AUqXXwFIxAyvcnhsTLMH54UUdSgAAAABJRU5ErkJggg==" InformativeScreenshot="481d928c5f22c5f85cc2b793fcb0dc5a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="467, 381, 172, 43" ElementType="InputBox" FriendlyName="'CPF do Servidor*'" FullSelectorArgument="&lt;webctrl parentid='divFiltros' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='divFiltros' tag='DIV' type='' class='dados' aaname='CPF do Servidor*                                              ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALAAAAAvCAYAAABDh0DIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALdSURBVHhe7ZddjpswFEa7RxYz7CRsoKqUt4hlRHnoGthE3lzAvv65NoQ0dKornU860hgTfI0PhvnxfD4dgFUQGEyDwGAaBAbTIDCYBoHBNAgMpvn/Ak+j67vOdV+jm1r9FrgPrlvmcHm0+w8zufGrc8O91QctlMAPNywLkRMWZbr15fGVwT3Cb9v9BxbjQ4EfFz1mquk80n1pzudTgeUeXEYv8MVfr79N7fMhkgSWm9j1bpzCsXVhfDsKqoUO4un+w/y1wH63WsZMUnnRvn0HO2sHlutYfht9M0HgJIN+6qfb0BRYC/+WwLJQOXHRUi2e7IHKaT1w4fgoAsdzArr2eczHWnfvfv309af5y667XF9qSmPF+ebEue/MIZPdvz3mN4bUIzvwzbfZgV8TBM4Xqz5pYVtg/8o+LHAmzyqsavtFlTpqcRLqc0fvWlEKX4/Ut0oRaxfm6//eq0vVoXdc1d6dQ/Xw5p88/ly+gY/jBY4L2hLFowXdbBfU36PyzRoXKRelkMb3F+KFY0J7TD8H6Ts6jhatHDfvU0Iuv80FfjUHLT98xPs7cE62CLH/xcK8K/ChBZffCfO5Mk7FpsC59FrSzwQu+hH4VF5+Az/v83dZtiNt3fh/JbBct6prPjd+6wbyGqpxcjYEjscvg3+gY/9nAhdzQOBTCQLPyI2vFsa3zxK4WkBphwX34kkNDVmEUG8SOz2Eq7QtSZdjS7vVp66xUF+7vBfSr+e+OwcEPpUk8Ir6x2hma5E0hwWeKV7vX72SqZSoKW+guE6g2HHjQ5mxK3A2j8Y/V7WUnn6ew/p3nPvOHBD4VJTAALZAYDANAoNpEBhMg8BgGgQG0yAwmCYKfL1eAczQFJgQC0FgYjoITEwHgYnpIDAxHQQmpoPAxHQQmJgOAhPTQWBiOghMTAeBiekgMDEdBCamg8DEdBCYmA4CE9NBYGI6CExMZ1NgACtUAgNYBIHBME/3B+EfF4FB6ROYAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Pesquisar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1415b799-1d4f-4b35-966e-574c2a02fc7f" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/pesquisarMargem?9" DesignTimeRectangle="467, 516, 92, 26" ElementType="Button" FriendlyName="'Pesquisar'" FullSelectorArgument="&lt;webctrl id='id2a' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id2a' tag='INPUT' type='button' class='botao botaoPadrao' aaname='Pesquisar' check:text='Pesquisar' /&gt;" Guid="0d22ed56-e467-496b-9f0b-425f50ff1485" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAeCAYAAADTsBuJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVGhD7ZpNSFRRFMfbR9AibFHgoqBFixYuhFoUBgp+VITaQmjRIggKHFpECAWZaJmZGQkVRKWMOGX5QSGFouKMM45oSDqj40eL+XBlMzYy4+b0znv3vXlv5r67aO5rBroHfuB9//POve//d2bzZk8ikQBB7hAB5BhDAAuBMNzuGoUymx3OXO8WcAL9RF/RX73fiBYAithc1TAINfe/Qm3TNwEn0E/09bztJXz3bdADwISwiTZAwIcy2zuob+6mB4AfE/Gfby3VjSNwsq6RHgB+/dBuEvClqOauCCCXMAO4eG9EYDHMAM7d+SKwGGYAFQ3DAothBlB6a1BgMcwASm5+5MLnTcio7ZUFaq9leGLKxpsbdD1HMAM4Xf+eC8MkgA03ff0/wwzg1I0+LgxFFMPXXcq6c3lXXm8vzxt0tdL7tIqsUfux8B7j3Hnw7uBqF7z90jxXVNZgZxM6zWarPVpFYUjqTc2S9okoPeoZs4UZQPE1OxcGwvKZYd2J6zmYkR8mCTMOO3T4kxQtCgOOCMhfGuFVw6xiJzFJvq72K/ers2L+OZ2m7KPdtxOBDrPZegw9qX3UUs6bPcwAiq7y4RMJQF9rU6jNgidOLhgqCZ75sGKAWuGAYVb6/bhu95EAfLM6TZrVJ/VO/ZI1iIehvY8+m3oeWTPuo3+2rGEFcOLKWy70h8jhJ9M1L7iJSe7edE2iN80oybwFwyz1fmXdtkQCWPLqNDJ7MhVAG3V2DH7qZml6aCVjn4xzZgEzgOOXX3PhAzFtdSJTa11UTIPQcoam0RNSzIiHYIz0xxY9kuaBaWIMzjbOUrUkTPdIMybUAELQSp0dJQGQfvW6YRb9GbKBGcCxuldccASVwwfG6XrLD2KcVlvgGN8if6slXZP73eAiZuhLme2HAFmnKgmubklT58WD0GI2O+O6VEG/YU+zZ/hbmAEcufQiz5kG529izBhNz3+YARRWd+U5TpgiAayM0vT8hxnAoQvPBBbDDOBg1VOBxZgGgK8kCyqfwIHydoFFFFQ8Nn8liS/lj9Y+h/2ljwQWUVjZbP5SHn+WUml7A4fLm2Df2Qewt+ShgBPoJ/qKXz+mP0tBUMSE8GOCzQI+oJ/oa7r5iCEAwb9HBJBTEvAHNltwUrlUC18AAAAASUVORK5CYII=" InformativeScreenshot="c57f4051a9c67008ca3bf2964e7224b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'ESCC8017: Servidor'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="334,331" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1415b799-1d4f-4b35-966e-574c2a02fc7f" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="250,115" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw Exception="[new BusinessRuleException(&quot;Servidor não permite a Consulta da Margem&quot;)]" sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/pesquisarMargem?9" DesignTimeRectangle="494, 386, 271, 13" ElementType="Text" FriendlyName="'ESCC8017: Servidor'" FullSelectorArgument="&lt;webctrl parentid='id57' tag='SPAN' aaname='*Servidor não permite a Consulta da Margem' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' innertext='*Servidor não permite a Consulta da Margem' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='id57' tag='SPAN' aaname='ESCC8017: Servidor não permite a Consulta da Margem' type='' innertext='ESCC8017: Servidor não permite a Consulta da Margem' class='' check:text='ESCC8017: Servidor não permite a Consulta da Margem' /&gt;" Guid="6682135e-9f93-470b-bb3c-7f8b77efa7eb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARMAAAARCAYAAAD+FkgHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUxSURBVHhe7VhLbhtJDNUNDfkysxkIBnyRCPB6zpAA2uUKWWTjM3gV9BRZH77HYrVacSuegWvx4BaLRT4+sqplHX69vS0TExMT78W8TCYmJnbBvEwmJiZ2wbxMJiYmdsG8TO6Gr8vz4WF5+RGtvRPfnpbD4bAcTl+XXz++LEf5G/lN7AvR/fHL8hqt3Yo9Y/1HYJeJDKUMKKIVKwfD7Mfzzxbg9fxAe2zt5/LyaPZDPViUBw8b5AhEvpwOy/O3wLdh28Flvk/LJfC5DaNL436XyeWU44omW+v+c8h9z73C5/0xnr07AS4A0f5d+W69TMoLhHJGtg+Eu0yiw5UHwginQ1LehLmZuCetqUDlIsE3Zir8eP5Ow6X7i6D6XPypUUUwwXAoh9wdNJb5vZ6f7ngQ73eZ/H9wv8tkPHvstytkfj7yMnl8WI6wR14qRzqbH4vNl0k/ECuDsjVWE3RkL5+vDCU1VnMPDvFaA2WtXFrNR/2f0pCK7e/lL7rQ6mXBlwa/LWM711nje16l5lPlNcoBOkMNowFTrVLM+u3Q6sn56v5qR//2MmicUm7VG/dYryKeZAv/PWMeaz7GnXFVa4ob1K2+tR/Q32oHnWtfhj0huNpwztpe6zOh5L6kPLmmxCvVgLMfcihn8Tn5NRvlcxpVO3ID3SSX5CSfgtV/czqS2NiVQ6v+LlED5an73XAU4Wz/yvAUsVrzVnjlwcC8aK8xIJeKa74qYtWgcYRhIy5uCKsd+bn4jDJ4JR/ldj7aJ6o71xnppXFoUPKz9KxdQGAnf+JUnrtYoB89JwjHFgv00c8BRr0c2QVbtAY7zWqyv9S+RzydLk0vAvTErWmubn7YJ+5zQvUX7mldYomuMQ/goLXiLKDu2B+xXzkD+jzobcKGbyYGFSMFM5KVVOAXCCWQ4o08D2Yj1gndE68YN3UNJXett4iE0JieB2jEdcBgtkEY2V2jBjr5milGGZA1riNdyN7qybmw/qoNx2FOtNbyo09QA+WwNQT7BTN2bfauam29UXvKQ1qt+RZ7p2/Uk7qmYC36HLbX+ANc7pBHxKH1uI/T6QN72370p1iunoSbLhNFC54FiIYhEwtidTlqo9aEFvTEFVs5h3BCUr6CIQ/hXfPasPEgj+wb8nq/9NlisO5tmFysbtgje9NvoK/3d3601vKjz6iG/DmExAm0ZT/WAHHzZYL7ogOEvmBnXQY90bUKp7HTq/oPNUJO6bn6W64BB39GqLaRPgC0UyxXT8KGyySRhOKw2NwA3JN8QSASRQX4h4dAiJb9GLdvRk889kvQOqIBlBz4gysMie6B+Olz/3U3Q3geH7HhEAfqIR5r9qiBCq7Z9IF8+oxDw3avlwA105glv9iRy+VsdtOYOdFaqwV9XN9Uh8pRPied63MFauL9AcPZ0z3XtDYNcSZaPRgDOUAM1mXQE10zqMZ4dgZ60bmpIP4G4zHgoBqATjQnkFvt0Kv0uTsDFMv1NmH1NxMUzuzYwNpUW7fgRRi/j/LUogRZAPIVaDOrPaEWpnbmotD4GNevWSxquMujdUQNLDGsTmwiaCW/vIMddWp7o/gN3Czdj4OosfIPa60OqCEaZgH3EnVy/YLeWyzmRGutloC3xsy94nmJ+gQ8Tqm+US8TOFaUc6Q19Aw0s3kacMAYbV9eG/aEYDOuL6Qg1vMp2X/rMhlw0Hnlc8Iz4DTydsxLsbjPArtMJj4F+HKY+NzgF+F7MS+TT4Z5mXx2wLeuhD1nYV4mExMTu2BeJhMTEzvgbfkXDsuEs6f3RfgAAAAASUVORK5CYII=" InformativeScreenshot="82b80f4a641e31d7bff3b063369b4ac6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANgSURBVDhPbdJrTJNXGMDxAziVbLoYE7NpluicH50KIY4QhpdOiYotNErRImYUaxGEUinVzgIiQjsLtYBvy6V96Y2+tH1X+7ZcWkpbqpUqhJaLH0i8oUYSI84Q3ExmjmyeJWzh9+H5cp7/8+mA5UzKZeAZro7r4xatGygUplJcIb1fLN3w9xscf/TPzrJGxVIwXo/Fu49xkhxph7i/JezTWXfQorofjjw3n+AqvfKmbzyCSuBQq1GBTOltAC78FeMWXdlkOcDiWhLTR8jE/fPOnbT3A8mMBU9W/h+O0opnTnljFhtCYFepULlogrwNSG4Z6BVe+bYz81SrZvfBWfuerFdBTplvrEhcHc0vz3iqaDv6wEQc9ut0X804KEAuPaAtl4CuseHY9szTxa005jzBODl4p7iCOWywfdcTuJuqHQykWIfvJfVGJr9wjY2jaonmMyWgRXAx/gaDrSbyigbCtfJdVDCSoDF7NEqT63kj2f+mrW9otssTqgzcm1zTH4qiEqkt4IGyE+yVuvJLvEGpgua+H92mNLv8vBo1LLyOw1qbFxY24LCz5+68Oxgpbayuiu229aB6kUIgAbXnhLG2euWGV2bLStIfThNhpjl65U3IxUjIqmmDdIHsJUb6HmCGW511MsWqBgxH9f9onEOA8IbTCqUdcwl5EpiYVw3ZNTgUaZzT4nbzDN7v14UjkdWDGvxz1S9VK0x1v6ISoYangH/i4dZrWirA5DfB3MtaWNFGwRKsC8pI11tqbLw02NS63lJ2kX/9FGd7y888VCJ3ok8W5yZg908lNRp9Ab5c/6ZEoZ2TdVNhIjRyftQ9tNlVcIHffogVUTBzaUp6zqdwKaMvBHCfPcYSmNjScsuX0kx5Un2eoeQXKiJ7hF9jMRw8/lp/OLvHJZBscSz+n//oM5iADsNWTPd6k353ehmPOvQZflFVzojwqiXIKn5tTWFAfG/GQ9vpgqPw/YeY+1dlqEQIeTMwKlVfU5J64vbZCwteFmeB2Ed/Z9yd/qdx10+z5h8ZPhsr/3i3SPiZhXsOVUvYZRhwaa3xBk7JMU0yzdDxfQrZuiPViieny7r2M4842LyNo8qOuKC4DhXL0F2SAKtUHteQk7umLiPzy2uM7LV6cdXqmcfTIEQ50Na/APgIrWKZwe9Y6bgAAAAASUVORK5CYII=" InformativeScreenshot="39df19b70edac8011b816f999897a435.png" Selector="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" Url="https://www.portaldoconsignado.org.br/*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;FINAL - Consultar&quot;]" />
+  </Sequence>
+</Activity>

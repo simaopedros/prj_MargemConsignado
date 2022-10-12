@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="seq_loginGovSP" this:seq_loginGovSP.arg_Key="b8b3fbae47f1232b726590352364fae3" this:seq_loginGovSP.arg_Usuario="04694569902" this:seq_loginGovSP.arg_Password="Marcelo*" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="seq_loginGovSP" this:seq_loginGovSP.arg_Key="b8b3fbae47f1232b726590352364fae3" this:seq_loginGovSP.arg_Usuario="08839543970" this:seq_loginGovSP.arg_Password="Marcelo1*" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="arg_Key" Type="InArgument(x:String)" />
     <x:Property Name="arg_Usuario" Type="InArgument(x:String)" />
@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1056,2123.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154.4,3643.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>seq_loginGovSP_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -49,7 +49,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,9 +82,10 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="seq_loginGovSP" sap:VirtualizedContainerService.HintSize="854.4,2058.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="seq_loginGovSP" sap:VirtualizedContainerService.HintSize="1051.2,3578.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="var_boolAcessoLiberado" />
     </Sequence.Variables>
@@ -93,14 +94,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="812.8,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;INICIO - Login&quot;]" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Serviço de Controle Consignação" sap:VirtualizedContainerService.HintSize="812.8,1668" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1008,118.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;INICIO - Login&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Serviço de Controle Consignação" sap:VirtualizedContainerService.HintSize="1008,3170.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="779.2,1451.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="974.4,2944" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="var_Codigo" />
               <Variable x:TypeArguments="x:String" Name="arg_imagePath" />
@@ -110,15 +111,21 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[var_boolAcessoLiberado]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="737.6,1356.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[var_boolAcessoLiberado]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="931.2,2851.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="702.4,1189.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="896,2634.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="660.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[arg_Usuario]" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Login Administrativo'" sap:VirtualizedContainerService.HintSize="852.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?16" DesignTimeRectangle="427, 105, 115, 13" ElementType="Text" FriendlyName="'Login Administrativo'" FullSelectorArgument="&lt;webctrl aaname='Login Administrativo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login Administrativo' tag='SPAN' type='' class='' check:innerText='Login Administrativo' /&gt;" Guid="e8e1e63b-f711-434c-9f29-f0f1823c7f65" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAARCAYAAAAv+NkbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIGSURBVFhH7VbtlYQgDLy6LYImsIu1CLcIi/BXjgSCSQT2dD/Ou8ePeauETJIZ8O3Xuq7QcT10Yy6KbsxF0Y25KP6IMTP4wcG0lGL/E9mYeRzA3ZbdhkO4exjcBEsp1sIygRta9Q8a84M+lpuDYZyLsXVdYHID+HspVoPJOatFwmuNOQkUyY0eXHWQT9+YFxjzJB4bg86H04xQcbGOoIbEKSE+FFvGOVcBB0LR+XeL0anONVKManjwQQRcx56wFu1hY3/Qh7wxqk5Y03U9zLIm8qrZY1/lHN4b3rEv05vU0GrfNoY+MSwWnloeTJ5gcVJEUeTjZ2qam7HAGiIn90C1eSBRj4aRz9zTsT7oGY1RMwaOG5oluLC+rEn9bCB+MriQQ7WkbmLGqrYRbWPEgGqPWq8LkvkMj0QWCN/FPrVujWEuZd6xPjb+KIruryYyx1MOo2mMrZX6NZxW/182JubmAQnRgM8Zg7nMFepTvGVMjDHnxtPI4T5xjWsqzqPG1K6bWj8myJ6fhY3IeZjDMVlPcqn8k8YEDr+LPzYmxuLzQ2MoFv7gyLjSUGhL+40x+uSmgbFAWpPG2f1EKpqpCcL5iN2pRRgO4seh3nZj9GeJxaE4rQV+2z++U8yBH7cZWjkxxr1aHq0tIhtzHuIzU4x3nMFJY9IVrrjd8TxecGM63oFuzCWxwjf7h+6isKpeywAAAABJRU5ErkJggg==" InformativeScreenshot="5e0316f7670dd48e9f1ae14b13856081.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="852.8,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="852.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[arg_Usuario]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="782, 297, 375, 35" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='caixaTextoLogin' aaname='CPF' /&gt;" Guid="17e44888-38bb-47b9-ad5b-95973d30ff92" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXsAAAAnCAYAAADuBegzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFfSURBVHhe7djBjYMwFEXR6b8URAcsaIEWWNAFkkdvFCySTAPmnyO9RSLW15Z/GgCPJ/YABYg9QAFfsd/3va3r2uZ5btM0mZnZIEu30+90/NNb7Ldta8uytOM42nmer38BGEG6nX6n4+n5XY99ToJ8IPIAY0vH0/P7Db/HPlf/nAgAjC89T9cvPfZ563GrB3iG9Dxdv/TY53EfgOe4d13sAR5K7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAv6N/TzP7TzP1y8ARpaep+uXHvt1XdtxHK9fAIwsPU/XLz32+763ZVnc7gEGl46n5+n6pcc+tm37+yAngugDjCXdTr/T8fT87i32kZMgV/+89eRx38zMxli6nX7fb/SXr9gD8DxiD/B4rf0CbdD3TfeWwykAAAAASUVORK5CYII=" InformativeScreenshot="3c48965e3df04af36839d9f7f03bb886.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
@@ -129,29 +136,29 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="660.8,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[arg_Password]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="852.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[arg_Password]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="782, 376, 375, 35" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='caixaTextoLogin' aaname='Senha' /&gt;" Guid="909f742a-27f1-46fb-9676-739a188e23b9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXsAAAAnCAYAAADuBegzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFeSURBVHhe7djBjYMwFEXR6b8URAcsaIEWWNAFkkdvFCySTAPmnyO9RSLW15Z/GgCPJ/YABYg9QAFfsd/3va3r2uZ5btM0mZnZIEu30+90/NNb7Ldta8uytOM42nmer38BGEG6nX6n4+n5XY99ToJ8IPIAY0vH0/P7Db/HPlf/nAgAjC89T9cvPfZ563GrB3iG9Dxdv/TY53EfgOe4d13sAR5K7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoACxByhA7AEKEHuAAsQeoIB/Yz/PczvP8/ULgJGl5+n6pcd+Xdd2HMfrFwAjS8/T9UuP/b7vbVkWt3uAwaXj6Xm6fumxj23b/j7IiSD6AGNJt9PvdDw9v3uLfeQkyNU/bz153DczszGWbqff9xv95Sv2ADxNa7+zRPVPsZJvagAAAABJRU5ErkJggg==" InformativeScreenshot="c670aee9dbc24bdaaa2720f2de2a128e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'IMG cipCaptchaImg'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="660.8,52.8" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
+                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'IMG cipCaptchaImg'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="852.8,243.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
                     <uix:NTakeScreenshot.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="782, 453, 250, 63" ElementType="Icon" FriendlyName="'IMG cipCaptchaImg'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='Captcha' /&gt;" Guid="744ad7f4-403c-4a36-aa15-9f14edf10071" ImageBase64="" InformativeScreenshot="402901d8bcee23ffc9d1c2811c93e79a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NTakeScreenshot.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTakeScreenshot>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke seq_CaptchaSolver workflow" sap:VirtualizedContainerService.HintSize="660.8,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Navegador\seq_CaptchaSolver.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke seq_CaptchaSolver workflow" sap:VirtualizedContainerService.HintSize="852.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Navegador\seq_CaptchaSolver.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <OutArgument x:TypeArguments="x:String" x:Key="TextoCaptcha">[var_Codigo]</OutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="Key">[arg_Key]</InArgument>
@@ -159,43 +166,71 @@
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT captcha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="660.8,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[var_Codigo]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT captcha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="852.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Text="[var_Codigo]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="782, 525, 375, 35" ElementType="InputBox" FriendlyName="'INPUT captcha'" FullSelectorArgument="&lt;webctrl id='captcha' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='captcha' tag='INPUT' type='text' class='caixaTextoLogin placeholder' aaname='Captcha' /&gt;" Guid="8c85bad5-8de7-4918-adf7-ad9da807af28" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXsAAAAnCAYAAADuBegzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFfSURBVHhe7djBjYMwFEXR6b8UJCpgQQ2UwIIukDx6o2CRZBow/xzpLRKxvrb80wB4PLEHKEDsAQr4iv2+721d1zbPc5umyczMBlm6nX6n45/eYr9tW1uWpR3H0c7zfP0LwAjS7fQ7HU/P73rscxLkA5EHGFs6np7fb/g99rn650QAYHzpebp+6bHPW49bPcAzpOfp+qXHPo/7ADzHvetiD/BQYg9QgNgDFCD2AAWIPUABYg9QgNgDFCD2AAWIPUABYg9QgNgDFCD2AAWIPUABYg9QgNgDFCD2AAWIPUABYg9QgNgDFCD2AAWIPUABYg9QgNgDFCD2AAX8G/t5ntt5nq9fAIwsPU/XLz3267q24zhevwAYWXqerl967Pd9b8uyuN0DDC4dT8/T9UuPfWzb9vdBTgTRBxhLup1+p+Pp+d1b7CMnQa7+eevJ476ZmY2xdDv9vt/oL1+xB+BpWvsFHtj1c45bOnQAAAAASUVORK5CYII=" InformativeScreenshot="b0996569c5c40c478def5f70a30e8ae6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Acessar'" sap:VirtualizedContainerService.HintSize="660.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Acessar'" sap:VirtualizedContainerService.HintSize="852.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="782, 590, 375, 37" ElementType="Button" FriendlyName="'Acessar'" FullSelectorArgument="&lt;webctrl id='ide' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ide' tag='INPUT' type='button' class='botaoAcessar' aaname='Acessar' check:text='Acessar' /&gt;" Guid="3c52675a-9514-4fef-a033-40eac03ca1cf" ImageBase64="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" InformativeScreenshot="e8a4f51808601885509deaeee7e0c9f3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?24" DesignTimeRectangle="533, 470, 300, 29" ElementType="Button" FriendlyName="'Acessar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' aaname='Acessar' class='botaoAcessar' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' aaname='Acessar' class='botaoAcessar' check:text='Acessar' /&gt;" Guid="677bcc05-4df4-4545-b508-80fb7c8438ad" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAAhCAYAAABeBvd5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL6SURBVHhe7d27bqNAFIDhfVqeIjyFSaRIeYbYblKmxGjLpLUNTZQyd9u5SGc5w22AmWKrHZa/+GQzF2iiXyAl4dfpdBIAmCICBmCyegF7e3uTx8dHKYpC8jwHgCBok7RN2ii7WW3AdEIXPj8/y/f3t/z8/ABAELRJ2qbb21t5eHgYB0zr9vT0ZBYCQIju7u7k5uZmHDC9Rfv6+nJuAoAQHA4Hubq6GgdMHx81YAAQssvLSwIGYJq8Afv8/ASAoBEwAJPlDVjzHQBCRcAATJY3YMfjEbNVyDqOJIpiWReueSAMBAxjxVriSAMWSbwq3GuAAHgDpr8khnnKl7FE8Vqy+jMfzGcXVdwaSVbP5V34jIus2zecixLJzFwmSW+8vOvLXeut69R7kqzZ25wLc0PAMJCbx8d4Wf4MmIjUQannTbzsqJVrEuda6zxtcJo5PY+utddU4xpPs07PZwcwS7q4tdEjXHPnDdjHxwfmKF+ZEK1yPd7L6kwDs3fM9e31bu1iMx47W8neu29Th2047mKv/Zt9+J8RMPS00XEdm7ugRDb1XKcKnf241zJ7+/N2eDbW42gbyoa5XjevCBhs3oC9v79jdnaeEJV3T/tyflMFLPXsi693g/GBvd6JNee0z5PWj4TdtXbXZTjL42TTX1Md298xZwQMHROYOlbtuBUn53wlPS/jU95t7Qbjbr4ANdf67QgiAcOYN2D6Tw0xL1u96zlbytY1Hi0kLb9XobLW7JayuN6aT727ivW7NRefp92nPV6GcLlLZdG7XnlcnmOR1tex9pjjes5e154Ts0TAUNvK0tz1WAFq1HFqgtHEpNGFpArLeM43Xl3THu+u39+zSO1oETBUvAF7fX0FgKARMACT5Q3Yy8sLAASNgAGYLG/A9LVFABAyZ8D0rUT61g/XO9kAIAT63yicbyXivZAAQud9L6T+fsX9/b1ZoH/x7doMAP+CNknbpI+PzjdzK53Quuktmi4EgBBok7RNdrxUL2AAMCUEDMBEneQPqiykAuctb6YAAAAASUVORK5CYII=" InformativeScreenshot="cb30b246997694643a30d2d3a8fb150e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" />
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NCheckState Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="660.8,374.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Timeout="5" Version="V1">
+                  <uix:NCheckState sap:VirtualizedContainerService.HintSize="852.8,806.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Timeout="5" Version="V1">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,578.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign sap:VirtualizedContainerService.HintSize="356.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[var_boolAcessoLiberado]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Consulta de Margem'" sap:VirtualizedContainerService.HintSize="356.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/autenticado?38" DesignTimeRectangle="202, 381, 135, 14" ElementType="Text" FriendlyName="'Consulta de Margem'" FullSelectorArgument="&lt;webctrl tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' idx='4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='recolher1' aaname='Consulta de Margem' check:text='Consulta de Margem' /&gt;" Guid="cc812d1b-88fb-49b3-aa8d-5a14ca3bcabf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAASCAYAAABrcC10AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVGhD7VhLUttAEM2ddAu4RyTfwxZcw5bhFtgGKjtWAVsGihUxxvxWLIDNpLvno55RSxYGUlRKrnrlmenXPa97Hq5Kfry8vKiTkxP19PTUokUtWrO0aAxnlsfHxxYtatGapUVjOLM8PDzU4s/qUaVpuha/Tn6L+d8Jx7uR6uxfirHNcKzSqKOGcyn2/6CxWdAITT7b29tifojL/Y6KoqjA7rHI+woUZrlUwyRS6UTmNccGZpkPVUfoG7XhPD6u6fPhzHJ/f1+L95hFyue42EtgIKk6cmcX8Gh8/7U42olUsncBa7wXH0bmNccRmCVRw1yKVSAfqoT+UHge1rFmYdxvAmeWu7u7Wqwzy9vbG32jWaT8Aoc0kHQsxRDnKov1wHCQ2cycj1MyWAoPLcfsua59PgRDxpk6N3X5/hDNMjzXZ1KeO2N3lMB1hlzdoz5P1WEpFzDLwCwJ9JOQFjqDPpJh5s2nSo/uQXNdn8Ecop1Ddx+v4+4jDXymqLXQ7ngGn2IWNMrz8zOt15rFCBQHCKCmbJPGIMQ1g7BDxGFpHjbHHgrqZw3NYh+80rh4J6vB4dfnGnRNO2ivHw5jlmwM304X1qj5Y2J6qH9vjn5e5Ry5VtJgc6z5+bz9d3JmWa1WteBm2draKgH/HY4fNIuU7zDqQcMDNZdiq7kagODeyO4nqgfN0B7zop6aGO6cHgvrMI6rw+Pl/YTMMofz8L4A0wE8pKRV0pmowRTWmMN0lvbeOeZgLfyGGjX9uJxSDyYWzJX63ZnQOuS6faDN4wm6NzKL/by+vtIvChrl9vaWzhqZRRoeIRwUe5RKs8CeGtM/nZazuVm0Bl0LwGoUWGcWlk8Q+iWezkFtCRhGawpnIOt5r1l8PU3NYnoycWcWfOw6hGYJjXJ9fU3naJYw14cZxoEUy/UjuBjjHhizGG6e6cfPXa7GJIVhpBPNZ3HOR06S5XBecx/uz2Bgwh1yHgz2DNaYw3RWgng8x6w9DdV6ih5MTOoX5yBxLQKtHs/TpOHMslwua8HNIhnl6uqKYmgWKZ9jlsXw8F01dmcz1Y/1nmLpWJ8fdAseX1te3Fez5Vh1LR8whobjbBbwsT6YiPiME6yXWCuKVf80vEPvOTDP12nz9F1FTdinQo3TvorZXQVQQ6S6B3Yt6/F1A4J6ZX1s3rCn+pRTnHs1BX3vNkuVUfI8p3gTsyC0YfRPIsIbLj4snTOxlWbhfAB7XBqYqdNNKwZNdTUPB8h1xWlXxRVmsY9KXODxR/ViFC/M7NDILNV6SmYJuTGs2b3+vM29m5rl5uamFvg/s2iEdUCelN/i32LUg4cfTMXYpmhslhbfHVPV/2l/OQC9kcD5GJxZFotFixa1aM3SoiEW6i/LmuWhsjfhPgAAAABJRU5ErkJggg==" InformativeScreenshot="f49ea86b1fe1712931ef9bb5c8704b6d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Consulta de Margem'" sap:VirtualizedContainerService.HintSize="356.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c9d4923-7399-4556-8d68-0fafddd6fb83" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/autenticado?38" DesignTimeRectangle="202, 422, 200, 14" ElementType="Text" FriendlyName="'Consulta de Margem'" FullSelectorArgument="&lt;webctrl tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' idx='3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Consulta de Margem' check:text='Consulta de Margem' /&gt;" Guid="53c3e7d2-a750-453b-9881-7bd409a90f1c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAASCAYAAAAXFjGtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK+SURBVGhD7ZjRjcIwDIZvp651GaVikopFEDvwgMQISDzkYjtJbdcpLYgTFD98Qmkcx0n+v6n4uV6v8XQ6xdvt5jhOA/AIeMUN4zgLcMM4zgrcMI6zAjfMCzjuuhj2F7PvMY6x70Iczlaf859s1jCXfYhd143sjmbcKxgNc4nDbxf7gx23nAcMcx5iMNYNtcF+PF/Td7JJw5BZ+nisz0C4vP1a3sowYhzkccM8wwYNQ6JoC4JETDcPE9OhR5P1+Q087SvPKTea8neIl5yXt4th9C1Xx9VncybgderYUfjyxcBAw4S0njB+HqZ1hP0g9qdVD62BYus61T7w24vnqfNhDXxPodax9hr3QWzPMPmQWrcJHmw56GwSjM1iKELCTxeMU2/3lH9YaJi7NwzMyXJwZH5eA+UsYhPr4WTDDIf0W+uCHDMvFFYPrl/soxzX3EdeK9ZQxpQXAN/v9jm9K9szzIwIpwJmIlAHOArWFpgUtGwvNgwIyqzVqpOLkAlNt8VzGAO5slFm1lPHTNaQ+9S+csPo2NpWtYm4Vt1vzjYN0zwILRYmzKZhUhsPlz4jSszjhqEaKFeC5Ri5Zxg2HjHWi3E0BmoLyTRUk94Du561hpH1LDVMXlPu/wS2Z5iJIDiWEHN7zjAMFAcIxRLQRGwz80EbRGPMcd8whkE0XJBCnLyGdj1rDSNiC6pWN8ybgocpRAUCpDY/aGGSpmGSqEp8oh66iCeBTw2jxcSEn9rcZCV/AcbJOss4mmvMmdo7I0dTkNowdj2y7oTKN62P7XdqY343zOdApqHPg/qJgH1Z3PicHVjTMDw+wQSOosl54N8oU2yYl+JARLyusOsbNwxAwsbYFMeFLfqwfzR0ZZFh2vVMDKNj0ycen1fud57XDeM4hGWob8AN4yxE3bTWrfYFuGEcZwVuGMdZARnmGv8ARLjSjYvqiaoAAAAASUVORK5CYII=" InformativeScreenshot="f8979af61c6c94e995fd61577ca11ffe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="356.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[var_boolAcessoLiberado]</OutArgument>
                           </Assign.To>
@@ -204,39 +239,33 @@
                           </Assign.Value>
                         </Assign>
                       </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Boolean">[var_boolAcessoLiberado]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/home?1" DesignTimeRectangle="850, 277, 98, 17" ElementType="Text" FriendlyName="'Dados inválidos.'" FullSelectorArgument="&lt;webctrl parentid='id16' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='id16' tag='SPAN' type='' class='' aaname='Dados inválidos.' check:innerText='Dados inválidos.' /&gt;" Guid="460043f1-9bf6-45fd-a295-8a436a5b3662" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAVCAYAAAC0aZsNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJmSURBVGhD7VXLbcMwDO2AnsbIJEHQMZxDpghy8AzJISvkVKgy9eEjRdsx0rQqoMMDGpEUH9+j3I+vx8M11IdmTKVoxlSKZkylaMZUimaMx7jvXNf17nSz43+B9xpzO7pdZQOXuLjPrnOfZz67D73r+qO7izwbZOr+YsZeARtDIk6bI4GEN+MdxpwPP7rdZIISVhiz0u/XjBFGEKkXGv+LF1OiyhdTvBBxHp49vqjdcBX54XuNQGNUPQ4U+3DdwY0phhBmp88Q3hvrzE3nz1bBE4wQxujlKnh6wBxUm2Oyv4zJOo11Yzx4K/xguEmqhvKKuBSRjby6Uw/3qt7jXosaYdyJJjLXcL9YHDIr5Mr7kcuCMYZG3C8JDwuFywG9Q63SUuEpYwRRARheCBYBZ+YdFPdkrdo5iNzSUBRA90QRNTBX1EE/q57PDC4xPukzr6GN7cbEPHySZEyxESl3fqgwzBSPGxvvszhkbDCmzE1/T5A9CYvGwBJSfUCeS/Ri0F05nnopnQxs+5TR0EgOyL5kDOavkBcCrBij+eWNDXW4wWjGW4zB32nGQg/Gpn/+pbhA1iIGZ2LYBMtMgiF4guizZgz3PXnuWVSjL/ITXKGftVx8ZnG2zSTMzh6wbEw8S2S0uPTbx0PjQIKJx99KRCYJ+VMfHFiIryBi68bkGfA+fX/KWTEm3A119JtnDnpAb8ifYsgTe5C5yqTCmPzMIqwNSLHdcFEbEYTKtYMSQMXZRHXuIfsChKhPGONBg8NCTUhLRfCxEYSaNcaom14iz6HilokZzHHZmIaq0IypFM2YStGMqRIP9w1uJk+wGD0UQwAAAABJRU5ErkJggg==" InformativeScreenshot="bcb7a2350ef8750fee0ecdd085bc9484.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://www.portaldoconsignado.org.br/consignatario/autenticado?9" DesignTimeRectangle="368, 325, 68, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Inicio'" FullSelectorArgument="&lt;webctrl parentid='menu' tag='SPAN' aaname='Inicio' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' innertext='Inicio' visibleinnertext='Inicio' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menu' tag='SPAN' aaname='Inicio' type='' innertext='Inicio' visibleinnertext='Inicio' class='' check:text='Inicio' /&gt;" Guid="46d5df0f-8465-4e2a-9f5c-bf300b8c80f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAWCAYAAABjadrAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG8SURBVFhH7ZVLboMwEIZ7Jw4FuQe45wimvQWBtNvskvBo1uT9OMJ0bINtwBLqJnIjR/okPPN7wF+I8gb4Wa1W8Hg8HAakoPv97jDgBE0gBd1uN4cBJ2gCJ2gCKeh6vToM2CUoJ+B5niJIYGfKDakSmGGe5IZej28gmJt97gw9M1LQ5XKxhC9+iODjx9B7PlLQ+Xy2hKUQlNSG3vP5F4LqJADPp1Bn+k+QwLLbU1AIsEaybka7R2aR9yXWDfJ7M8dfzP8RxA7AD8lqNVBfWw8EiXwAtBBrkWdC+7PHufG9paDT6WQJOUT8IStZq/gbFEOl5XjNiyBn623MBUUL836F3qsgRsnDXG8u8nqC+HUA8VZlFfpscS2kaiwi/lZ1+6Wg4/FoCe0haClrJRWCSi3Ha0wQW29aQWl3jQfcqKxCn90KYnv0TNoKave/niDDfoXeK8VPbJDrzUWkoMPhYAkZhHgInxayVlAfBc2h0HK85oWQsfV6Dj7uCVPRywj7R/Jhvlb5jLBsf7aYoefG97ZLUBriA6u/3E7KXwWpvjaLZFgfCxjes9dDpKD9fu8w4ARN4ARNIAU1TeMY0cAv2GI9IHrdVwoAAAAASUVORK5CYII=" InformativeScreenshot="0ae49c041cc0ac5d7c375e386e0e3069.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                     </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
                 </Sequence>
               </ui:InterruptibleDoWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleDoWhile>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANgSURBVDhPbdJrTJNXGMDxAziVbLoYE7NpluicH50KIY4QhpdOiYotNErRImYUaxGEUinVzgIiQjsLtYBvy6V96Y2+tH1X+7ZcWkpbqpUqhJaLH0i8oUYSI84Q3ExmjmyeJWzh9+H5cp7/8+mA5UzKZeAZro7r4xatGygUplJcIb1fLN3w9xscf/TPzrJGxVIwXo/Fu49xkhxph7i/JezTWXfQorofjjw3n+AqvfKmbzyCSuBQq1GBTOltAC78FeMWXdlkOcDiWhLTR8jE/fPOnbT3A8mMBU9W/h+O0opnTnljFhtCYFepULlogrwNSG4Z6BVe+bYz81SrZvfBWfuerFdBTplvrEhcHc0vz3iqaDv6wEQc9ut0X804KEAuPaAtl4CuseHY9szTxa005jzBODl4p7iCOWywfdcTuJuqHQykWIfvJfVGJr9wjY2jaonmMyWgRXAx/gaDrSbyigbCtfJdVDCSoDF7NEqT63kj2f+mrW9otssTqgzcm1zTH4qiEqkt4IGyE+yVuvJLvEGpgua+H92mNLv8vBo1LLyOw1qbFxY24LCz5+68Oxgpbayuiu229aB6kUIgAbXnhLG2euWGV2bLStIfThNhpjl65U3IxUjIqmmDdIHsJUb6HmCGW511MsWqBgxH9f9onEOA8IbTCqUdcwl5EpiYVw3ZNTgUaZzT4nbzDN7v14UjkdWDGvxz1S9VK0x1v6ISoYangH/i4dZrWirA5DfB3MtaWNFGwRKsC8pI11tqbLw02NS63lJ2kX/9FGd7y888VCJ3ok8W5yZg908lNRp9Ab5c/6ZEoZ2TdVNhIjRyftQ9tNlVcIHffogVUTBzaUp6zqdwKaMvBHCfPcYSmNjScsuX0kx5Un2eoeQXKiJ7hF9jMRw8/lp/OLvHJZBscSz+n//oM5iADsNWTPd6k353ehmPOvQZflFVzojwqiXIKn5tTWFAfG/GQ9vpgqPw/YeY+1dlqEQIeTMwKlVfU5J64vbZCwteFmeB2Ed/Z9yd/qdx10+z5h8ZPhsr/3i3SPiZhXsOVUvYZRhwaa3xBk7JMU0yzdDxfQrZuiPViieny7r2M4842LyNo8qOuKC4DhXL0F2SAKtUHteQk7umLiPzy2uM7LV6cdXqmcfTIEQ50Na/APgIrWKZwe9Y6bgAAAAASUVORK5CYII=" InformativeScreenshot="94facdf6fbd3d5e6d6ceb59031b975ce.png" Selector="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" Url="https://www.portaldoconsignado.org.br/home?1" />
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANgSURBVDhPbdJrTJNXGMDxAziVbLoYE7NpluicH50KIY4QhpdOiYotNErRImYUaxGEUinVzgIiQjsLtYBvy6V96Y2+tH1X+7ZcWkpbqpUqhJaLH0i8oUYSI84Q3ExmjmyeJWzh9+H5cp7/8+mA5UzKZeAZro7r4xatGygUplJcIb1fLN3w9xscf/TPzrJGxVIwXo/Fu49xkhxph7i/JezTWXfQorofjjw3n+AqvfKmbzyCSuBQq1GBTOltAC78FeMWXdlkOcDiWhLTR8jE/fPOnbT3A8mMBU9W/h+O0opnTnljFhtCYFepULlogrwNSG4Z6BVe+bYz81SrZvfBWfuerFdBTplvrEhcHc0vz3iqaDv6wEQc9ut0X804KEAuPaAtl4CuseHY9szTxa005jzBODl4p7iCOWywfdcTuJuqHQykWIfvJfVGJr9wjY2jaonmMyWgRXAx/gaDrSbyigbCtfJdVDCSoDF7NEqT63kj2f+mrW9otssTqgzcm1zTH4qiEqkt4IGyE+yVuvJLvEGpgua+H92mNLv8vBo1LLyOw1qbFxY24LCz5+68Oxgpbayuiu229aB6kUIgAbXnhLG2euWGV2bLStIfThNhpjl65U3IxUjIqmmDdIHsJUb6HmCGW511MsWqBgxH9f9onEOA8IbTCqUdcwl5EpiYVw3ZNTgUaZzT4nbzDN7v14UjkdWDGvxz1S9VK0x1v6ISoYangH/i4dZrWirA5DfB3MtaWNFGwRKsC8pI11tqbLw02NS63lJ2kX/9FGd7y888VCJ3ok8W5yZg908lNRp9Ab5c/6ZEoZ2TdVNhIjRyftQ9tNlVcIHffogVUTBzaUp6zqdwKaMvBHCfPcYSmNjScsuX0kx5Un2eoeQXKiJ7hF9jMRw8/lp/OLvHJZBscSz+n//oM5iADsNWTPd6k353ehmPOvQZflFVzojwqiXIKn5tTWFAfG/GQ9vpgqPw/YeY+1dlqEQIeTMwKlVfU5J64vbZCwteFmeB2Ed/Z9yd/qdx10+z5h8ZPhsr/3i3SPiZhXsOVUvYZRhwaa3xBk7JMU0yzdDxfQrZuiPViieny7r2M4842LyNo8qOuKC4DhXL0F2SAKtUHteQk7umLiPzy2uM7LV6cdXqmcfTIEQ50Na/APgIrWKZwe9Y6bgAAAAASUVORK5CYII=" InformativeScreenshot="94facdf6fbd3d5e6d6ceb59031b975ce.png" Selector="&lt;html app='chrome.exe' title='Serviço de Controle Consignação' /&gt;" Url="https://www.portaldoconsignado.org.br/home?2" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="812.8,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;FINAL - Login&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1008,118.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;FINAL - Login&quot;]" />
   </Sequence>
 </Activity>
